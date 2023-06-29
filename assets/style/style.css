@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --color-1: #3B2B46;
+    --color-2: #A795A5;
+    --color-2-custom: #665264;
+    --color-3: #7A959E;
+    --color-4: #FFFFEA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.header-menu {
+    width: auto;
+    height: 8vh;
+    background-color: var(--color-2-custom);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ul-menu {
+    list-style-type: none;
+    gap: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ul-menu li {
+    margin-top: 10px;
+    margin-right: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-4);
+}
+
+a:hover, a:focus {
+    color: var(--color-1);
+}
+
+.btn-mobile{
+    display: none;
+}
+
+/* Estilizando o grid */
+
+main {
+    grid-column: 2 / 3;
+}
+
+aside {
+    background-color: var(--color-1);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    color: var(--color-4);
+    overflow-y: scroll;
+}
+
+.my-container {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 92vh;
+}
+
+/* Conteudo do  aside */
+
+h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+}
+
+.ul-aside {
+    padding: 15px;
+    list-style: none;
+}
+
+.ul-aside li{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.ul-aside li:hover {
+    background-color: rgba(255, 255, 255, 0.144);
+}
+
+.ul-aside li a{
+    color: var(--color-4);
+    font-weight: 700;
+    border-bottom: 1px solid  var(--color-4);
+}
+
+.ul-aside li a:hover {
+    color: var(--color-2);
+    border-color: var(--color-2);
+}
+
+/* Estilizando a section carteira */
+
+.carteira {
+    height: 30vh;
+    background-color: var(--color-2);
+    background-image: url(../image/cheque-guarantee-card-g30054e851_640.png);
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+
+h2, h3, p, button {
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+
+.bg-my {
+    background-color: var(--color-3);
+}
+
+.bg-my:hover{
+    border: 1px solid black;
+}
+
+.btn {
+    margin-top: -10px;
+}
+
+#elemento {
+    display: inline;
+}
+
+.icon {
+    padding: 5px;
+}
+
+/* Estilizando a section de planos */
+.planos {
+    overflow: hidden;
+}
+
+.planos p {
+    font-size: 1em;
+    padding: 5px;
+    margin-left: -15px;
+}
+
+.table {
+    margin-top: 25px;
+}
+
+@media (max-width: 840px){
+    
+    .carteira h2{
+        font-size: 2em;
+    }
+
+    .carteira h3 {
+        font-size: 1em;
+    }
+}
+
+
+
+@media (max-width: 630px){
+    
+
+
+    .ul-menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 8vh;
+        right: 0px;
+        background-color: var(--color-2-custom);
+        height: 0px;
+        z-index: 9;
+        transition: .6s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    nav.active ul{
+        height: calc(100vh - 8vh);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .ul-menu li{
+        border-bottom: 1px solid var(--color-1);
+        overflow: hidden;
+    }
+
+    .ul-menu li a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+    }
+
+    .btn-mobile{
+        display: block;
+        margin-right: 10px;
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        border: none;
+        background: none;
+        margin-top: -5px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .my-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 92vh;
+    }
+
+    main {
+        grid-column: 2 / 4;
+    }
+
+    aside {
+        background-color: var(--color-1);
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        color: var(--color-4);
+        overflow-y: scroll;
+    }
+
+}
+
+@media (max-width: 428px){
+
+    .btn-mobile {
+        margin-top: -15px;
+    }
+
+    .carteira {
+        height: 20vh;
+    }
+
+    .carteira h2{
+        font-size: 1.8em;
+    }
+
+    .carteira h3 {
+        font-size: 1em;
+    }
+
+    .header-menu {
+        height: 5vh;
+    }
+
+    .ul-menu {
+        top: 5vh;
+    }
+
+    .carteira h2, h3, p, button {
+        margin-top: -10px;
+    }
+}
