@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+    --color-1: #3B2B46;
+    --color-2: #A795A5;
+    --color-2-custom: #665264;
+    --color-3: #7A959E;
+    --color-4: #FFFFEA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../image/fundo-criarconta.png');
+    background-position: 50%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.box-1 {
+    margin-bottom: 20px;
+    color: var(--color-1);
+}
+
+.box-1 h1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item-form {
+    padding: 0 5px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    position: relative;
+    top: 25px;
+    left: 5px;
+    width: 20px;
+}
+
+label {
+    position: relative;
+    top: 15px;
+}
+
+input {
+    padding-left: 25px;
+    font-size: 1em;
+}
+
+.item-form-btn button {
+    margin-top: 35px;
+    width: 200px;
+    height: 45px;
+    background-color: var(--color-2);
+    border: 0;
+    border-radius: 5px;
+    color: black;
+}
+
+.item-form-btn button:active {
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+
+@media(max-width: 700px){
+
+    .container {
+        background-image: url('../image/fundo-criarconta.png');
+        background-position: 10px 100px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .box-1 {
+        width: 100%;
+        height: 70vh;
+        color: var(--color-1);
+    }
+
+    .box-1 h1 {
+        margin-top: 10px;
+        text-align: center;
+    }    
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-form {
+        padding: 0 5px;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon {
+        position: relative;
+        top: 25px;
+        left: 5px;
+        width: 20px;
+    }
+
+    label {
+        position: relative;
+        top: 15px;
+    }
+
+    input {
+        padding-left: 25px;
+        font-size: 1em;
+    }
+
+    .item-form-btn button {
+        margin-top: 35px;
+        width: 100%;
+        height: 45px;
+        background-color: var(--color-2);
+        border: 0;
+        border-radius: 5px;
+        color: black;
+    }
+
+    .item-form-btn button:active {
+        background-color: var(--color-1);
+        color: var(--color-4);
+    }
+
+}
