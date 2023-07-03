@@ -25,7 +25,7 @@
 }
 
 .my-bg {
-    background-image: linear-gradient(to top, #3b2b46, #55435c, #705d73, #8b788c, #a795a5);
+    background-image: linear-gradient(to bottom, #a795a5, #8b788c, #705d73, #55435c, #3b2b46);
 }
 
 /* Estilizando o main que envolve o formulário */

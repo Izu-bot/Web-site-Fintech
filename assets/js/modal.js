@@ -24,7 +24,7 @@ formulario.addEventListener('submit', (e) => {
     // Cancelar o evento padrão
     e.preventDefault();
 
-
+    // Construindo uma array com os dados do formulario
     const dadosArray = [
         document.querySelector('#nomeGasto').value,
         document.querySelector('#dataGasto').value,
@@ -33,8 +33,7 @@ formulario.addEventListener('submit', (e) => {
         document.querySelector('#descricao').value
     ];
 
-    console.log(dadosArray);
-
+    // Criando uma div para armazenar todo o conteudo
     const boxGastos = document.querySelector('#boxGasto');
 
     // Construir o card com as classes do bootstrap
@@ -47,13 +46,19 @@ formulario.addEventListener('submit', (e) => {
     const cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
 
+    /* 
+    forEach reponsável por percorrer o array, com dois parametros, o primeiro representa os valores
+    da array dadosArray, a segunda representa o indice de seus valores.
+    */
     dadosArray.forEach((dado, index) => {
 
         if (dado.trim() !== '') {
 
+            // Criação da tag p com uma class do bootstrap
             const cardText = document.createElement('p');
             cardText.classList.add('card-text');
 
+            // Condições para executar uma determinada operação em indices diferentes
             if (index === 0) {
                 const cardTitle = document.createElement('h5');
                 cardTitle.classList.add('card-title');
@@ -64,25 +69,23 @@ formulario.addEventListener('submit', (e) => {
             } else if (index === 1) {
                 cardText.textContent = `Data: ${dado}`;
             } else if (index === 2) {
-                console.log(dado);
                 cardText.textContent = `Pagamento em: ${dado}`;
             } else if (index === 3) {
-                cardText.textContent = `Valor gasto: ${dado}`;
+                parseInt(dado);
+                cardText.textContent = `Valor gasto: R$${dado}`;
             } else if (index === 4) {
-                if (dado.trim() === '') {
-                    cardText.textContent = 'Descrição: Nada foi digitado.';
-                } else {
-                    cardText.textContent = `Descrição: ${dado}`;
-                };
+                cardText.textContent = `Descrição: ${dado}`;
             };
+
+            // Saida das condições e atribuindo elas como filhos de outras tags ja criadas
             card.appendChild(cardText);
             boxGastos.appendChild(card);
-        }
-
-    })
+        };
+    });
 
     // Fechar o modal
     modal.style.display = 'none';
 
+    // Resetar o formulário
     formulario.reset();
-});
+})

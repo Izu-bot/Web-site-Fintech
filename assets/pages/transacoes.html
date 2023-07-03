@@ -24,6 +24,8 @@
         </nav>
     </header>
 
+    <!-- Inicio do conteiner e criação da primeira section -->
+
     <div class="container-fluid">
         <section class="sec-1">
             <h1>Seus recebidos</h1>
@@ -35,7 +37,7 @@
                         <p class="card-text"> <i class="bi bi-cash-coin"></i> Pagou você com Pix valor dê: R$ 15,00.
                         </p>
                         <p>21/06/2023</p>
-                        <button class="btn bg-danger" onclick="deletarCard(this)">Deletar</button>
+                        <button class="btn btn-my-color" onclick="deletarCard(this)">Deletar</button>
                     </div>
                 </div>
                 <div class="card my-color">
@@ -44,7 +46,7 @@
                         <p class="card-text"> <i class="bi bi-cash-coin"></i> Pagou você com Pix valor dê: R$ 25,50.
                         </p>
                         <p>16/6/2023</p>
-                        <button class="btn bg-danger" onclick="deletarCard(this)">Deletar</button>
+                        <button class="btn btn-my-color" onclick="deletarCard(this)">Deletar</button>
                     </div>
                 </div>
                 <div class="card my-color">
@@ -55,7 +57,7 @@
                             1.700,00.
                         </p>
                         <p>15/6/2023</p>
-                        <button class="btn bg-danger" onclick="deletarCard(this)">Deletar</button>
+                        <button class="btn btn-my-color" onclick="deletarCard(this)">Deletar</button>
                     </div>
                 </div>
                 <div class="card my-color">
@@ -66,7 +68,7 @@
                             300,00.
                         </p>
                         <p>21/05/2023</p>
-                        <button class="btn bg-danger" onclick="deletarCard(this)">Deletar</button>
+                        <button class="btn btn-my-color" onclick="deletarCard(this)">Deletar</button>
                     </div>
                 </div>
                 <div class="card my-color">
@@ -75,12 +77,15 @@
                         <p class="card-text"> <i class="bi bi-cash-coin"></i> Pagou você com Pix valor dê: R$ 30,00.
                         </p>
                         <p>15/05/2023</p>
-                        <button class="btn bg-danger" onclick="deletarCard(this)">Deletar</button>
+                        <button class="btn btn-my-color" onclick="deletarCard(this)">Deletar</button>
                     </div>
                 </div>
             </div>
         </section>
         <hr>
+
+        <!-- Inicio da segunda section -->
+
         <section class="sec-2">
             <h1>Seus gastos</h1>
             <div class="btn-add">
@@ -91,6 +96,7 @@
             <div class="box-gastos" id="boxGasto"> </div>
 
             <!-- modal -->
+
             <div id="modal" class="modal container-fluid">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -99,15 +105,15 @@
                         <div class="item-form">
                             <label for="nomeGasto">Nome do gasto</label>
                             <input type="text" id="nomeGasto" name="nomeGasto" placeholder="Ex: Lanche na lanchonete"
-                                autofocus class="form-control">
+                                autofocus class="form-control" required>
                         </div>
                         <div class="item-form">
                             <label for="dataGasto">Data</label>
-                            <input type="date" id="dataGasto" name="dataGasto" class="form-control">
+                            <input type="date" id="dataGasto" name="dataGasto" class="form-control" required>
                         </div>
                         <div class="item-form">
                             <label for="formaPagamento">Forma de pagamento</label>
-                            <select name="formaPagamento" id="formaPagamento" class="form-control">
+                            <select name="formaPagamento" id="formaPagamento" class="form-control" required>
                                 <option value="nada" disabled selected>Escolha um...</option>
                                 <option value="dinheiro">Dinheiro</option>
                                 <option value="debito">Débito</option>
@@ -118,7 +124,7 @@
                         <div class="item-form">
                             <label for="valorGasto">Valor Gasto R$</label>
                             <input type="number" id="valorGasto" name="valorGasto" min="0" max="1000"
-                                placeholder="EX: 10.00" class="form-control">
+                                placeholder="EX: 10.00" class="form-control" required>
                         </div>
                         <hr>
                         <div>
