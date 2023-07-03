@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style/style.css">
+  <title>Fintech</title>
+</head>
+
+<body>
+  <!-- Menu -->
+
+  <header class="header-menu">
+    <nav id="nav">
+      <button class="btn-mobile" id="btn-mobile"><i class="bi bi-list"></i></button>
+      <ul class="ul-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="transacoes.html">Transações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Criando o Layout -->
+  <div class="my-container">
+    <aside>
+      <header>
+        <h1>
+          Notificações
+        </h1>
+      </header>
+      <ul class="ul-aside">
+        <li><i class="bi bi-bell icon"></i><strong>Marcos de Souza</strong> pagou você com um total dê <strong>R$
+            56,90</strong>.</li>
+        <li><i class="bi bi-bell icon"></i><strong>Atualize seus dados!</strong>Para uma melhor experiencia atualize
+          seus
+          dados <a href="transacoes.html">clicando aqui.</a></li>
+        <li><i class="bi bi-bell icon"></i>Seu pagamento em <strong>Uber</strong> foi um sucesso. Para mais informações
+          <a href="transacoes.html">clique aqui.</a>
+        </li>
+        <li><i class="bi bi-bell icon"></i>Sua compra pela internet no valor dê R$110,89 no site <strong>Kabum</strong>
+          foi
+          um sucesso!</li>
+        <li><i class="bi bi-bell icon"></i>Faça <strong>Pix</strong> para seus amigos de uma forma mais rápida,
+          compartilhe
+          sua lista de contatos com o app do banco.</li>
+        <li><i class="bi bi-bell icon"></i>Chegou agora nosso cartão de débito. Para pedir ele <a
+            href="transacoes.html">clique aqui</a>
+          para preencher o formulario necessário.</li>
+        <li><i class="bi bi-bell icon"></i>Compre hoje no site <strong>Amazon</strong> e receba 6% de
+          <strong>cashback</strong> á cada compra.
+        </li>
+        <li><i class="bi bi-bell icon"></i>Parabéns! Seu dinheiro já rendeu <strong>R$5,90</strong>.</li>
+        <li><i class="bi bi-bell icon"></i><strong>Juliana Ferreira da Silva</strong>fez um <strong>Pix</strong> de
+          R$280,00. Para mais informações <a href="transacoes.html">clique aqui.</a></li>
+        <li><i class="bi bi-bell icon"></i>Você fez um <strong>Pix</strong> de R$15,00 para <strong>Claudio Roberto de
+            Souza Jr.</strong> para mais informaçẽos <a href="transacoes.html">clique aqui.</a></li>
+      </ul>
+    </aside>
+    <main>
+      <section class="carteira">
+        <h2><i class="bi bi-wallet2"></i>Florentino</h2>
+        <h3>Saldo em conta</h3>
+        <p>R$: <strong id="elemento">500,90</strong></p>
+        <button class="btn bg-my" id="btn">Esconder</button>
+      </section>
+      <section class="planos">
+        <h3>Planos</h3>
+        <p>Sempre que você cadastrar um novo plano usando nosso banco ele aparecerá aqui. Assim é mais fácil de
+          gerencia-los.</p>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Plataforma</th>
+                <th>Data da assinatura</th>
+                <th>Gênero</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="bi bi-twitch"></i> Twitch</td>
+                <td>24 Jun 2023</td>
+                <td>Entretenimento</td>
+                <td>R$ 14,90</td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-xbox"></i> Game Pass </td>
+                <td>12 Mai 2022</td>
+                <td>Entretenimento</td>
+                <td>R$ 44,99</td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-dropbox"></i> DropBox</td>
+                <td>10 Fev 2021</td>
+                <td>Trabalho</td>
+                <td>R$ 24,00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/esconderElemento.js"></script>
+  <script src="../js/btnToggle.js"></script>
+</body>
+
+</html>

@@ -22,5 +22,5 @@ document.querySelector('#criarConta').addEventListener('submit', (e) => {
     localStorage.clear();
 
     // Redirecionando o usuario para a página Home, simulando uma criação de conta
-    window.location.href = 'index.html'
+    window.location.href = '../pages/home.html';
 });
